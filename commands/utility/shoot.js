@@ -41,7 +41,7 @@ module.exports = {
                 ...gameState,
                 gameOver: true
             });
-            await interaction.reply(`Shot fired at ${x},${y}. \n ${response.hit ? "You hit a ship!": "You Missed."}      Ships left: ${response.shipsLeft}. \n${printedGameBoard} \n*Game Over! All ships have been sunk.*`);
+            await interaction.reply(`Shot fired at ${x},${y}. \n ${response.hit ? "*You hit a ship!*": "*You Missed.*"}      Ships left: ${response.shipsLeft}. \n${printedGameBoard} \n*Game Over! All ships have been sunk.*`);
         }
     
     },

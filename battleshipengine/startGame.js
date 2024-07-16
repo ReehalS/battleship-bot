@@ -12,7 +12,9 @@ const startGame = () => {
     let ships = {
         destroyer: 2,
         cruiser: 3,
-        battleship: 4
+        battleship: 4,
+        cruiser: 3,
+        carrier: 5
     };
     let shipPlacement = [];
     for (let ship in ships) {

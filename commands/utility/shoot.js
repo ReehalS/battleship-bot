@@ -34,14 +34,14 @@ module.exports = {
             await interaction.reply(`Invalid coordinates. Please enter a valid x and y coordinate between 0 and 7. \n${response.playerBoard}`);
         } else if(response.shipsLeft > 0){
             const printedGameBoard = printGameBoard(playerBoard);
-            await interaction.reply(`Shot fired at ${x},${y}. \n ${response.hit ? "You hit a ship!": "You Missed."}      Ships left: ${response.shipsLeft}. \n${printedGameBoard}`);
+            await interaction.reply(`Shot fired at ${x},${y}. \n ${response.hit ? "**You hit a ship!**": "**You Missed.**"}      Ships left: ${response.shipsLeft}. \n${printedGameBoard}`);
         } else {
             const printedGameBoard = printGameBoard(playerBoard);
             setGameState(userId, {
                 ...gameState,
                 gameOver: true
             });
-            await interaction.reply(`Shot fired at ${x},${y}. \n ${response.hit ? "*You hit a ship!*": "*You Missed.*"}      Ships left: ${response.shipsLeft}. \n${printedGameBoard} \n*Game Over! All ships have been sunk.*`);
+            await interaction.reply(`Shot fired at ${x},${y}. \n ${response.hit ? "*You hit a ship!*": "**You Missed.**"}      Ships left: ${response.shipsLeft}. \n${printedGameBoard} \n**Game Over! All ships have been sunk.**`);
         }
     
     },
